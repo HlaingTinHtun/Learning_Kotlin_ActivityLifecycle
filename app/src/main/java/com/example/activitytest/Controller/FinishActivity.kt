@@ -2,9 +2,9 @@ package com.example.activitytest.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.activitytest.Model.Player
 import com.example.activitytest.R
-import com.example.activitytest.Utilities.EXTRA_LEAGUE
-import com.example.activitytest.Utilities.EXTRA_SKILL
+import com.example.activitytest.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_finish.*
 
 class FinishActivity : BaseActivity() {
@@ -13,9 +13,8 @@ class FinishActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)
 
-        val league = intent.getStringExtra(EXTRA_LEAGUE)
-        val skill = intent.getStringExtra(EXTRA_SKILL)
+        val player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)
 
-        searchLeagueText.text = "Looking For $league $skill league near you ..."
+        searchLeagueText.text = "Looking For ${player.league} ${player.skill} league near you ..."
     }
 }
