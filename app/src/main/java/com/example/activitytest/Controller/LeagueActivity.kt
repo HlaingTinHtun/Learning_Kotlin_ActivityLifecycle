@@ -1,10 +1,11 @@
-package com.example.activitytest
+package com.example.activitytest.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.activitytest.Utilities.EXTRA_LEAGUE
+import com.example.activitytest.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
